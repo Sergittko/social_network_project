@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+  background-color: #444343;
+  padding: 10px;
+  color: #2a2a2a;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #444343;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+  background-color: #444343;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #767676;
+}
+/*
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: gray;
+} */
+
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  grid-template-areas: 'h h''n c';
+  min-height: calc(100vh - 20px);
+}
+
+.app__content {
+  grid-area: c;
+  background-color: #e4573e;
+  padding: 10px;
+  border-radius: 0 0 10px 0;
+}
+
+.app__content_container{
+  height: 99%;
+}

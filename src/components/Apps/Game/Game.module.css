@@ -1,0 +1,71 @@
+.find_treasure {
+  padding: 0 0 30px 0;
+}
+
+.heading {
+  margin: 0 0;
+  padding: 30px 0 15px 0;
+  font-size: 70px;
+  color: darkslategrey;
+}
+
+.map img {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  display: block;
+  border: #ff9481 solid 5px;
+  cursor: pointer;
+}
+
+.frame {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  display: block;
+}
+
+.distance {
+  margin: 0 0 10px 0;
+  padding: 5px 0 0 0;
+  text-align: center;
+  font-size: 25px;
+  font-family: cursive;
+}
+
+.chest {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  margin: 5px;
+  box-shadow: 0 0 0 0 rgba(251, 70, 70, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+}
+
+.chest img {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(251, 70, 70, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(251, 70, 70, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(251, 70, 70, 0);
+  }
+}

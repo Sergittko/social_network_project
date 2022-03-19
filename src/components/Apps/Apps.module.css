@@ -1,0 +1,52 @@
+.apps_container {
+  position: relative;
+  height: 100%;
+}
+
+.apps_container h1 {
+  text-align: center;
+  font-size: 35px;
+  margin: 0px 15px 10px 15px;
+  /* position: absolute;
+  right: 0;
+  left: 0;
+  top: 0; */
+}
+
+.component_container {
+  position: relative;
+  /* height: 100%; */
+  margin: 5px 0 0 0;
+  border-radius: 5px;
+  background-color: #ffb1a3;
+}
+
+.button_container {
+  text-align: center;
+}
+
+.button_container button {
+  margin: 0 5px;
+  color: #2a2a2a;
+  background-color: #ff9481;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 0;
+}
+
+.button_container button:hover {
+  color: #2a3170;
+  background-color: #ffb1a3;
+}
+
+.button_active {
+  padding: 5px 10px 25px 10px !important;
+  margin: 0 5px -20px 5px !important;
+  background-color: #ffb1a3 !important;
+  font-weight: bold;
+}

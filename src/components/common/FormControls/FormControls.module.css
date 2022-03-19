@@ -1,0 +1,47 @@
+.inputContainer textarea {
+  /* background-color: #a41010; */
+  /* color: #b9b9b9; */
+  position: relative;
+  z-index: 1;
+}
+
+.inputContainer input {
+  position: relative;
+  z-index: 1;
+}
+
+.errorMessage {
+  position: relative;
+  display: block;
+  text-align: center;
+  z-index: 0;
+  padding: 5px 0 0 0;
+  border-radius: 0 0 5px 5px;
+  color: #ffcccc;
+  background-color: #a20000;
+  /* position: absolute; */
+  animation-direction: alternate;
+  animation: errorSpanShow 0.2s ease-out both;
+}
+
+.errorMessageInput {
+  font-size: 15px;
+  margin: -13px auto 0 auto;
+}
+
+.errorMessageTextarea {
+  font-size: 20px;
+  margin: auto;
+}
+
+@keyframes errorSpanShow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-7px);
+    opacity: 1;
+  }
+}

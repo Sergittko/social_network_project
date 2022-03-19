@@ -1,0 +1,21 @@
+.message {
+  background-color: #ff6aa6;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 5px 5px 5px auto;
+  position: relative;
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -4px;
+  padding: 0px 0px 9px 19px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 6px solid #ff6aa6;
+  border-top: 0px;
+  border-radius: 9px;
+}

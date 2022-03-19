@@ -1,0 +1,100 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 150px 13fr;
+  height: 100%;
+}
+
+.dialogs_list {
+  border-right: 2px solid #ffcdcd;
+  /* padding: 0 5px 0 0; */
+  margin: 0 15px 0 0;
+}
+
+.message_wrapper {
+  background-color: #ff9481;
+  border-radius: 5px;
+  padding: 10px 10px 75px 10px;
+  position: relative;
+}
+
+.messages{
+  overflow-y:auto;
+  /* height: 100%; */
+  height: calc(100vh - 215px);
+}
+
+.messages::-webkit-scrollbar {
+	width: 5px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+	background-color: #e48675;
+}
+
+.dialog_input {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  width: 100%;
+}
+
+.dialog_input .textarea {
+  display: block;
+  border-radius: 0 0 5px 5px;
+  outline: none;
+  border-top: 2px solid #767676;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 50px 4px 10px;
+  width: 100%;
+  background-color: #ffcdcd;
+  overflow: hidden;
+  font-size: 16px;
+  resize: none;
+  font-weight: 100;
+  overflow-y:auto;
+  /* white-space: nowrap; */
+}
+
+.dialog_input .textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: none;
+}
+
+.dialog_input .textarea::-webkit-scrollbar {
+  width: 12px;
+  background-color: none;
+}
+
+.dialog_input .textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: none;
+}
+
+
+.dialog_input button {
+  background-color: #ff6aa6;
+  color: #ffe8e8;
+  outline: none;
+  position: absolute;
+  right: 5px;
+  top: 48%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+  transform: translateY(-50%);
+  margin:auto;
+}

@@ -1,0 +1,130 @@
+.app__user_information {
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+  position: relative;
+}
+
+.app__user_data {
+  margin: 0 0 0 20px;
+}
+
+.app__user_data p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.user__name {
+  font-size: 20px !important;
+  margin: 0 0 25px 0 !important;
+  font-weight: 600;
+}
+
+.app__content_avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.userPhotoContainer {
+  position: relative;
+}
+
+.userPhotoContainer input {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+  position: absolute;
+}
+
+.userPhotoContainer label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px;
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+}
+
+.userPhotoContainer label:hover {
+  background-color: #e24d11;
+}
+
+/*                    UserContacts                      */
+.userContactsContainer {
+  position: absolute;
+  right: 0;
+  height: 140px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  direction: rtl;
+  grid-auto-flow: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: start; */
+  /* align-items: center; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+.contactsLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 5px;
+  border: 2px solid rgba(61, 62, 157, 0.8);
+  background-color: rgba(0, 1, 145, 0.2);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 0 2px 1px #3d3e9d;
+  color: #d9d9ee;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.contactsLink:hover {
+  border: 2px solid rgba(61, 62, 157, 1);
+  background-color: rgba(0, 1, 145, 0.3);
+  box-shadow: 0 0 4px 2px #3d3e9d;
+  color: #fff;
+}
+
+.contactsLink a {
+  color: inherit;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+
+.logOutButton_enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.logOutButton_enter_active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.logOutButton_exit {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.logOutButton_exit_active {
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}

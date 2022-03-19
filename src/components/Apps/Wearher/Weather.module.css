@@ -1,0 +1,93 @@
+.main{
+  height: calc(100vh - 219px);
+  color: #173149;
+  position: relative;
+}
+
+.weather_section {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+
+.wrapper_div {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #222831;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.first_window {
+  position: relative;
+  width: 60%;
+  border-radius: 10px;
+  background: url('../../../img/bg_nar.png') no-repeat center;
+  background-size: 760px;
+}
+
+.first_window span {
+  position: absolute;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+}
+
+.temp_c {
+  bottom: 0;
+}
+
+.city {
+  top: 10px;
+  font-size: 18px !important;
+  width: 45%;
+  text-align: end;
+}
+
+.icon {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 35px;
+  border-radius: 25%;
+}
+
+.second_window {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.second_window span {
+  display: block;
+  text-align: center;
+}
+
+.span_top {
+  margin: 10px auto 0 auto;
+  width: 100%;
+}
+
+.span_bottom {
+  margin: 0 auto 6px auto;
+}
+
+.obs_time {
+  text-align: center;
+}
+
+.loading_time_span {
+  font-size: 11px;
+  margin: 0 0 15px 0;
+  color: #57a5b3;
+}

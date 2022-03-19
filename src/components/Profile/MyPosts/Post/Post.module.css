@@ -1,0 +1,50 @@
+.app__blog_elem {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f0f8ff7a;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.app__blog_elem:last-child{
+  margin: 20px 0 0 0;
+}
+
+.like_block {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.like_block span {
+  margin: 0 5px 0 0;
+  width: 40px;
+  text-align: right;
+}
+
+.like_button[data-liked="false"] {
+  background-color: #4fee83;
+  transition: 0.1s;
+}
+
+.like_button[data-liked="true"] {
+  background-color: #ee4f4f;
+  transition: 0.1s;
+}
+
+.app__blog_image {
+  min-width: 50px;
+  /* max-width: 50px; */
+  height: 50px;
+  padding: 3px;
+  background-color: #bababa;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+}
+
+.app__blog_text {
+  margin: 0 20px 0 30px;
+}
