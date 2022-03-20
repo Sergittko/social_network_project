@@ -5,7 +5,7 @@ import Preloader from "../common/preloader/Preloader";
 import preloaderGif from "../../img/preloader.gif";
 import Pagination from "react-js-pagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 let Users = props => {
   let [searchFollowed, changeSearch]=React.useState(true);
@@ -21,7 +21,7 @@ let Users = props => {
   return (
     <div>
       <div className={usersCss.pagination}>
-        <p className={usersCss.searchFilter} onClick={changeSearchSettings}>{searchFollowed? 'show followed users' : 'show all users'}</p>
+        <p className={usersCss.searchFilter} onClick={changeSearchSettings}><span><FontAwesomeIcon icon={faArrowLeft} /></span>{searchFollowed? 'show followed users' : 'show all users'}</p>
         <Pagination
           pageRangeDisplayed={5}
           onChange={getPageNumber.bind(this)}

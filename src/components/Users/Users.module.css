@@ -93,18 +93,27 @@ li.prev a, li.next a {
   position: absolute;
   right: 0;
   margin: auto;
-  top: 50%;
-  transform: translate(0%, -50%);
+  top: 0%;
+  transform: translate(0%, -180%);
   text-decoration: underline;
   color: #2a2a2a;
   background-color: #ff9481;
-  padding: 5px 10px;
+  padding: 5px 20px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
+  max-width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.searchFilter span {
+  margin: 0 13px 0 -6px;
 }
 
 .searchFilter:hover {
+  max-width: 170px;
+  padding: 5px 10px 5px 15px;
   color: #2a3170;
   background-color: #ffb1a3;
 }

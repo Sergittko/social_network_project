@@ -1,9 +1,10 @@
 import React from "react";
-// import profile from "./Profile.module.css";
+import style from "./Profile.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = props => {
+  console.log(props);
   return (
     <div>
       <ProfileInfo
@@ -13,7 +14,13 @@ const Profile = props => {
         updateStatus={props.updateStatus}
         updatePhoto={props.updatePhoto}
       />
-      <MyPostsContainer />
+      {props.defaultUserId === props.userInfoData?.userId ? (
+        <MyPostsContainer />
+      ) : (
+        <div className={style.noPosts}>
+          {props.userInfoData?.fullName} has no posts
+        </div>
+      )}
     </div>
   );
 };

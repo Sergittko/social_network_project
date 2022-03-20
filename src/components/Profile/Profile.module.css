@@ -1,0 +1,11 @@
+.noPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 295px);
+  margin: 10px 0 0 0;
+  background-color: #eaa49a;
+  filter: contrast(0.75);
+  border-radius: 0 0 5px 5px;
+  font-size: 35px;
+}
