@@ -3,7 +3,7 @@ import style from "./Weather.module.css";
 import WeatherSearch from "./WeatherSearch/WeatherSearch";
 // import img from "../../img/../img/preloader.gif";
 
-const Weather = props => {
+const Weather = React.memo(props => {
   return (
     <div className={style.main}>
       <div className={style.weather_section}>
@@ -33,6 +33,6 @@ const Weather = props => {
       </div>
     </div>
   );
-};
+});
 
 export default Weather;
