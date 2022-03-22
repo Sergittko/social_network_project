@@ -1,5 +1,142 @@
-.todoList{
-  font-size: 200px;
+.todoList {
+  /* font-size: 200px;
   text-align: center;
-  color: #1d96a2;
+  color: #1d96a2; */
+  height: calc(100vh - 219px);
+}
+
+.tasks_list_global {
+  height: fit-content;
+  padding: 50px 0;
+}
+
+.tasks_list_wrapper {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.list_header {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 10px 10px;
+  border-radius: 5px 5px 0 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #e7e7e7;
+  background-color: #950740;
+}
+
+.list_header i {
+  position: absolute;
+  left: 13px;
+}
+
+.input_tasks {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.input_tasks button, .input_tasks input {
+  margin: 0;
+  height: 35px;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #000;
+  color: #333;
+}
+
+.input_tasks button {
+  width: 130px;
+  border-left: 2px solid #cacaca;
+  border-radius: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.input_tasks button:active {
+  color: #6f6f6f;
+  background-color: #d9d8d8;
+}
+
+.input_tasks input {
+  width: 100%;
+  padding: 0 0 0 10px;
+  border-radius: 0 0 0 5px;
+}
+
+.ul_tasks {
+  margin: 0;
+  height: 216px;
+  padding: 10px 35px;
+  background: #ffd4e1;
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 212, 225, 1) 62%); */
+  /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,236,242,1) 7%, rgba(255,212,225,1) 16%); */
+}
+
+.ul_tasks li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  align-items: center;
+  margin: 12px 0;
+  padding: 5px 5px;
+  border-radius: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  background: rgb(255 255 255 / 40%);
+}
+
+.doneTask {
+  text-decoration: line-through;
+}
+
+.dot_span {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 5px 0 0;
+  padding: 5px;
+  border: #d22591 3px solid;
+  border-radius: 50%;
+  transition: 0.15s ease;
+}
+
+.dot_span:hover {
+  background-color: #d22591;
+}
+
+.dot_span:active {
+  background-color: #5e1242;
+}
+
+.ul_tasks button {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  margin: 0 0 0 auto;
+  padding: 6px 8px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #493d3d;
+  font-size: 15px;
+  border-radius: 35px;
+  transition: 0.1s ease;
+}
+
+.ul_tasks button:active {
+  color: #c4c2c2;
+}
+
+.ul_tasks button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  /* border-radius: 35px; */
 }
