@@ -1,6 +1,29 @@
 import React from "react";
 import style from "./ToDoList.module.css";
 
+let tasksData = [
+  {
+    idTask: 1,
+    isDone: false,
+    taskText: "one two three"
+  },
+  {
+    idTask: 2,
+    isDone: false,
+    taskText: "two three"
+  },
+  {
+    idTask: 3,
+    isDone: true,
+    taskText: "three"
+  },
+  {
+    idTask: 4,
+    isDone: false,
+    taskText: "44444"
+  }
+];
+
 let ToDoList = () => {
   return (
     <div className={style.todoList}>
@@ -9,13 +32,18 @@ let ToDoList = () => {
           <h2 className={style.list_header}>Todo list</h2>
           <div className={style.tasks_list}>
             <ul className={style.ul_tasks}>
-              <li>
-                <span className={style.dot_span}/>
-                
-                <button type="button">
-                  +
-                </button>
-              </li>
+              {tasksData.map(task => {
+                return (
+                  <li
+                    key={task.idTask}
+                    className={task.isDone ? style.doneTask : ""}
+                  >
+                    <span className={style.dot_span} />
+                    {task.taskText}
+                    <button type="button">+</button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className={style.input_tasks}>
