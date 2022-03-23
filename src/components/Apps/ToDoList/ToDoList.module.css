@@ -68,13 +68,31 @@
   border-radius: 0 0 0 5px;
 }
 
+.input_tasks div {
+  width: 100%;
+}
+
 .ul_tasks {
+  scroll-behavior: smooth;
+  overflow: auto;
   margin: 0;
   height: 216px;
   padding: 10px 35px;
   background: #ffd4e1;
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 212, 225, 1) 62%); */
   /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,236,242,1) 7%, rgba(255,212,225,1) 16%); */
+}
+
+.ul_tasks::-webkit-scrollbar {
+	width: 5px;
+}
+
+.ul_tasks::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.ul_tasks::-webkit-scrollbar-thumb {
+	background-color: #e48675;
 }
 
 .ul_tasks li {

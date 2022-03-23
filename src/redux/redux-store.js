@@ -6,6 +6,7 @@ import authReducer from "./auth_reducer";
 import settingsReducer from "./settings_reducer";
 import appReducer from "./app_reducer";
 import weatherReducer from "./weather_reducer";
+import toDoListReducer from "./toDoList_reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from "redux-form";
 
@@ -16,6 +17,7 @@ let reducers = combineReducers({
   settingsPage: settingsReducer,
   authData: authReducer,
   app: appReducer,
+  toDoList: toDoListReducer,
   weather: weatherReducer,
   form: formReducer
 });
