@@ -78,14 +78,14 @@ let ToDoList = props => {
                       <span
                         className={style.dot_span}
                         onClick={() => {
-                          props.changeTaskTh(task.idTask);
+                          props.changeTaskTh(task.idTask, props.tasks);
                         }}
                       />
                       {task.taskText}
                       <button
                         type="button"
                         onClick={() => {
-                          props.deleteTaskTh(task.idTask);
+                          props.deleteTaskTh(task.idTask, props.tasks);
                         }}
                       >
                         <FontAwesomeIcon icon={faTrashAlt} />

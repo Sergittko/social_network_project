@@ -76,7 +76,7 @@
   scroll-behavior: smooth;
   overflow: auto;
   margin: 0;
-  height: 216px;
+  height: 225px;
   padding: 10px 35px;
   background: #ffd4e1;
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 212, 225, 1) 62%); */
@@ -84,7 +84,7 @@
 }
 
 .ul_tasks::-webkit-scrollbar {
-	width: 5px;
+  width: 5px;
 }
 
 .ul_tasks::-webkit-scrollbar-thumb {
@@ -92,7 +92,7 @@
 }
 
 .ul_tasks::-webkit-scrollbar-thumb {
-	background-color: #e48675;
+  background-color: #950740;
 }
 
 .ul_tasks li {
@@ -113,6 +113,7 @@
 
 .doneTask {
   text-decoration: line-through;
+  filter: contrast(0.93);
 }
 
 .dot_span {
