@@ -8,7 +8,6 @@ import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 let Apps = React.memo(props => {
   let activeTab = localStorage.getItem('Apps_Tabs');
   let [appName, changeApp] = useState(!activeTab ? "weather" : activeTab);
-
   let renderApps = () => {
     switch (appName) {
       case "weather":
