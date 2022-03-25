@@ -84,14 +84,12 @@
 }
 
 .ul_tasks::-webkit-scrollbar {
-  width: 5px;
+  width: 11px;
 }
 
 .ul_tasks::-webkit-scrollbar-thumb {
   border-radius: 10px;
-}
-
-.ul_tasks::-webkit-scrollbar-thumb {
+  border: #ffd4e1 4px solid;
   background-color: #950740;
 }
 
@@ -114,6 +112,10 @@
 .doneTask {
   text-decoration: line-through;
   filter: contrast(0.93);
+}
+
+.doneTask span {
+  background-color: #ff66c6;
 }
 
 .dot_span {

@@ -8,7 +8,8 @@ import preloaderGif from "../../../img/preloader.gif";
 class WeatherContainer extends React.Component {
   componentDidMount() {
     let lastSearchedWeather = localStorage.getItem('weatherCity');
-    this.props.getWeatherDataTh(lastSearchedWeather? lastSearchedWeather : "Kiev");
+    if(!lastSearchedWeather) localStorage.setItem('weatherCity','Kiev');
+    this.props.getWeatherDataTh(localStorage.getItem('weatherCity'));
   }
 
   render() {

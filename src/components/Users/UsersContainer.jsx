@@ -14,6 +14,7 @@ import {
   getIsLoading,
   getIsFetching
 } from "../../redux/users_selector";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 
 class UsersClassComponent extends React.Component {
   componentDidMount() {
@@ -74,5 +75,7 @@ let UsersContainer = connect(mapStateToProps, {
   unfollowTh,
   followTh
 })(UsersClassComponent);
+
+UsersContainer = withAuthRedirect(UsersContainer);
 
 export default UsersContainer;

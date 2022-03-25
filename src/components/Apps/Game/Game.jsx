@@ -3,8 +3,8 @@ import style from "./Game.module.css";
 import chest from "../../../img/treasure_сhest.png";
 import map from "../../../img/treasure_map.jpg";
 
-let width = 600;
-let height = 600;
+let width = null;
+let height = null;
 let getRandomNum = function(maxSize) {
   return Math.floor(Math.random() * maxSize);
 };
@@ -12,6 +12,11 @@ let target = {
   a: getRandomNum(width),
   b: getRandomNum(height)
 };
+
+let getMapCoordinates = e => {
+  width = e.nativeEvent.path[0].clientWidth;
+  height = e.nativeEvent.path[0].clientHeight;
+}
 
 let Game = props => {
   let [count, changeCount] = React.useState(0);
@@ -82,7 +87,7 @@ let Game = props => {
       <div className={style.map}>
         <p className={style.distance}>{distanceText}</p>
         <div className={style.frame}>
-          <img className={style.map} onClick={gameFunction} src={map} alt="" />
+          <img className={style.map} onClick={(event)=>{getMapCoordinates(event); gameFunction(event)}} src={map} alt="" />
           <div className={style.chest} style={chestStyle}>
             <img src={chest} alt="" />
           </div>

@@ -34,7 +34,7 @@ const NavBar = props => {
           </NavLink>
         </li>
       </ul>
-      {props.isAuthoriserd && props.weather && (
+      {props.isAuthoriserd && localStorage.getItem('weatherCity') && props.weather && (
         <div className={nav.friendsWrapper}>
           <p className={nav.friendsHeader}>Weather</p>
           <Weather

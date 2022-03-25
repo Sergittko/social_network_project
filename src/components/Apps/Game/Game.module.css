@@ -1,5 +1,5 @@
 .find_treasure {
-  padding: 0 0 30px 0;
+  padding: 0 15px 15px 15px;
 }
 
 .heading {
@@ -10,20 +10,21 @@
 }
 
 .map img {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: inherit;
   margin: auto;
   display: block;
-  border: #ff9481 solid 5px;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .frame {
   position: relative;
-  width: 600px;
-  height: 600px;
-  margin: auto;
+  max-width: 100%;
+  height: calc(100vh - 293px);
   display: block;
+  margin: auto;
+  border: #ff9481 solid 5px;
 }
 
 .distance {

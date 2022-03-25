@@ -3,6 +3,7 @@ import WeatherContainer from "./Wearher/WeatherContainer";
 import Game from "./Game/Game";
 import ToDoList from "./ToDoList/ToDoList";
 import style from "./Apps.module.css";
+import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 // import { connect } from "react-redux";
 
 let Apps = React.memo(props => {
@@ -50,5 +51,7 @@ let Apps = React.memo(props => {
     </div>
   );
 });
+
+Apps = withAuthRedirect(Apps);
 
 export default Apps;
