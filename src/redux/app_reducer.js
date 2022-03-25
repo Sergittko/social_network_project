@@ -14,7 +14,8 @@ export const setInitialized = () => ({
 export const initializeApp = () => async dispatch => {
   await dispatch(authoriseTh());
   await dispatch(getWeatherDataTh(localStorage.getItem('weatherCity')));
-  dispatch(setInitialized())
+  dispatch(setInitialized());
+  localStorage.setItem('Apps_Tabs', 'weather')
 };
 
 const appReducer = (state = initialState, action) => {

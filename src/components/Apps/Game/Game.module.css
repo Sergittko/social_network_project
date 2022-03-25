@@ -45,6 +45,7 @@
   transform: scale(1);
   animation: pulse 2s infinite;
   border-radius: 50%;
+  filter: drop-shadow(3px 5px 8px black);
 }
 
 .chest img {

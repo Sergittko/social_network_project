@@ -4,11 +4,11 @@ import Game from "./Game/Game";
 import ToDoList from "./ToDoList/ToDoList";
 import style from "./Apps.module.css";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
-// import { connect } from "react-redux";
 
 let Apps = React.memo(props => {
-  let [appName, changeApp] = useState("toDoList");
-  // default localStorage.setItem('Apps_Tabs', 'appName');
+  let activeTab = localStorage.getItem('Apps_Tabs');
+  let [appName, changeApp] = useState(!activeTab ? "weather" : activeTab);
+
   let renderApps = () => {
     switch (appName) {
       case "weather":
@@ -28,21 +28,21 @@ let Apps = React.memo(props => {
       <div className={style.button_container}>
         <button
           className={appName === "weather" ? style.button_active : ""}
-          onClick={() => changeApp("weather")}
+          onClick={() => {changeApp("weather"); localStorage.setItem('Apps_Tabs', 'weather')}}
         >
           Weather APP
         </button>
 
         <button
           className={appName === "game" ? style.button_active : ""}
-          onClick={() => changeApp("game")}
+          onClick={() => {changeApp("game"); localStorage.setItem('Apps_Tabs', 'game')}}
         >
           'Find treasures' GAME
         </button>
 
         <button
           className={appName === "toDoList" ? style.button_active : ""}
-          onClick={() => changeApp("toDoList")}
+          onClick={() => {changeApp("toDoList"); localStorage.setItem('Apps_Tabs', 'toDoList')}}
         >
           ToDoList
         </button>
