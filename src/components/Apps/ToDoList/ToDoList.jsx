@@ -4,12 +4,13 @@ import { connect } from "react-redux";
 import { Input, createField } from "../../common/FormControls/FormControls";
 import { reduxForm, reset } from "redux-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faArrowLeft  } from "@fortawesome/free-solid-svg-icons";
 import {
   addTaskTh,
   initTasksTh,
   deleteTaskTh,
-  changeTaskTh
+  changeTaskTh,
+  removeAllTasksTh
 } from "../../../redux/toDoList_reducer";
 
 // let tasksData = [
@@ -66,6 +67,15 @@ let ToDoList = props => {
       <div className={style.tasks_list_global}>
         <div className={style.tasks_list_wrapper}>
           <h2 className={style.list_header}>Todo list</h2>
+          <p
+            className={style.remove_all_tasks}
+            onClick={() => props.removeAllTasksTh()}
+          >
+            <span>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </span>
+            {"remove all tasks"}
+          </p>
           <div className={style.tasks_list}>
             <ul className={style.ul_tasks}>
               {props.tasks &&
@@ -111,5 +121,6 @@ export default connect(mapDispatchToProps, {
   initTasksTh,
   deleteTaskTh,
   changeTaskTh,
+  removeAllTasksTh,
   reset
 })(ToDoList);

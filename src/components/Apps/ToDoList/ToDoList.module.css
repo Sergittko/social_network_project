@@ -11,6 +11,7 @@
 }
 
 .tasks_list_wrapper {
+  position: relative;
   margin: 0 auto;
   width: 500px;
 }
@@ -160,4 +161,32 @@
 .ul_tasks button:hover {
   background: rgba(255, 255, 255, 0.7);
   /* border-radius: 35px; */
+}
+
+.remove_all_tasks {
+  position: absolute;
+  right: 4px;
+  margin: auto;
+  top: 6px;
+  text-decoration: underline;
+  color: #2a2a2a;
+  background-color: #ffd4e1;
+  padding: 3px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  max-width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.remove_all_tasks span {
+  margin: 0 13px 0 -6px;
+}
+
+.remove_all_tasks:hover {
+  max-width: 170px;
+  padding: 3px 10px 3px 15px;
+  color: #2a3170;
+  /* background-color: #ffb1a3; */
 }
