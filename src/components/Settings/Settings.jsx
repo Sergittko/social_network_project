@@ -27,7 +27,6 @@ const SettingsForm = props => {
     if (e.target.files.length) props.updatePhoto(e.target.files[0]);
   };
 
-  console.log(props);
   return (
     <form onSubmit={props.handleSubmit}>
     {
