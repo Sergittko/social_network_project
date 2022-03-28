@@ -147,6 +147,20 @@ h1 {
   border-radius: 10px;
 }
 
+.submitSucceeded {
+  position: absolute;
+  z-index: 555;
+  background-color: #00a255;
+  color: aliceblue;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max-content;
+  padding: 4px 12px;
+  border-radius: 10px;
+}
+
 /* =============================img====================================== */
 .app__content_avatar {
   max-width: 200px;

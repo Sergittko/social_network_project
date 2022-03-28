@@ -27,8 +27,16 @@ const SettingsForm = props => {
     if (e.target.files.length) props.updatePhoto(e.target.files[0]);
   };
 
+  console.log(props);
   return (
     <form onSubmit={props.handleSubmit}>
+    {
+      props.submitSucceeded && props.valid && props.pristine && (
+      <div className={style.submitSucceeded}>
+        Changes saved
+      </div>
+    )
+    }
       {props.error &&
         props.error.map(error => (
           <div className={style.globalError} key={error}>
