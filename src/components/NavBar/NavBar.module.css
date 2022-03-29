@@ -38,12 +38,12 @@
   color: #838488;
   transition: 0.2s ease;
   padding: 5px 5px 5px 10px;
+  border-radius: 5px;
 }
 
 .app__nav_element a:hover {
   color: #c8c8c8;
   background-color: #2a4f87;
-  border-radius: 5px;
 }
 
 a.active {
