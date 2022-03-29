@@ -3,34 +3,42 @@ import nav from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import Weather from "./Weather/Weather";
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouseUser, faUsers, faCommentDots, faListUl, faSlidersH } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = props => {
   return (
     <nav className={nav.app__nav}>
       <ul className={nav.app__nav_list}>
+      <span className={nav.app__nav_span}>Navigation</span>
         <li className={nav.app__nav_element}>
           <NavLink to="/profile/" activeClassName={nav.active}>
-            Profile
+            <FontAwesomeIcon icon={faHouseUser} />
+            <span>Profile</span>
           </NavLink>
         </li>
         <li className={nav.app__nav_element}>
           <NavLink to="/users/" activeClassName={nav.active}>
-            Users
+          <FontAwesomeIcon icon={faUsers} />
+            <span>Users</span>
           </NavLink>
         </li>
         <li className={nav.app__nav_element}>
           <NavLink to="/dialogs/" activeClassName={nav.active}>
-            Dialogs
+            <FontAwesomeIcon icon={faCommentDots} />
+            <span>Dialogs</span>
           </NavLink>
         </li>
         <li className={nav.app__nav_element}>
           <NavLink to="/apps/" activeClassName={nav.active}>
-            Apps
+            <FontAwesomeIcon icon={faListUl} />
+            <span>Apps</span>
           </NavLink>
         </li>
         <li className={nav.app__nav_element}>
           <NavLink to="/settings/" activeClassName={nav.active}>
-            Settings
+          <FontAwesomeIcon icon={faSlidersH} />
+            <span>Settings</span>
           </NavLink>
         </li>
       </ul>

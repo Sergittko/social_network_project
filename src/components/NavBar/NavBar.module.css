@@ -1,53 +1,69 @@
 .app__nav {
   grid-area: n;
-  background-color: #589d1d;
+  background-color: #282c3c;
   border-radius: 0 0 0 10px;
+  color: #838488;
 }
 
 .app__nav_list {
-  margin: 10px;
-  padding: 20px;
+  margin: 0px;
+  padding: 10px;
   list-style: none;
-  background-color: #cbff9f;
   border-radius: 20px;
 }
 
+.app__nav_span {
+  font-size: 10px;
+  display: block;
+  margin: 0 0 10px 2px;
+  font-weight: 300;
+}
+
+.app__nav_element {
+  margin: 5px 0;
+}
+
+.app__nav_element span {
+  margin: 0 0 0 5px;
+  font-size: 18px;
+}
+
 .app__nav_element a {
+  display: block;
+  width: auto;
   font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 0 10px;
+  font-weight: 500;
   padding: 0;
   text-decoration: none;
-  color: #2a2a2a;
+  color: #838488;
   transition: 0.2s ease;
+  padding: 5px 5px 5px 10px;
 }
 
 .app__nav_element a:hover {
-  color: #ff3b8a;
+  color: #c8c8c8;
+  background-color: #2a4f87;
+  border-radius: 5px;
 }
 
 a.active {
-  color: #ff0067;
-  padding: 0 0 0 7px;
-  /* text-decoration: underline; */
   position: relative;
   transition: 0.2s ease;
 }
 
-a.active::after {
-  content: '';
-  position: absolute;
-  padding: 0px;
-  border-radius: 50%;
-  border: 2px solid #ff0067;
-  top: 50%;
-  left: 0;
+li>a.active {
+  display: block;
+  width: auto;
+  color: #fefefc !important;
+  background-color: #3770c6 !important;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px 5px 5px 10px;
 }
 
 .friendsWrapper {
   margin: 10px;
-  background-color: #cbff9f;
-  border-radius: 20px;
+  border-top: 2px solid #444343;
   padding: 0 7px 7px 7px;
 }
 
@@ -56,7 +72,8 @@ a.active::after {
   margin: 0 0 10px 0;
   padding: 5px 0 0 0;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 300;
+  color: #dddddd;
 }
 
 .friendsBlock {

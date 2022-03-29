@@ -3,11 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  background-color: #7df782;
+  background-color: #3770c6;
   margin: 0px;
   padding: 7px;
   border-radius: 15px;
   font-size: 18px;
+  color: #fefefc;
 }
 
 .weather_container p{
