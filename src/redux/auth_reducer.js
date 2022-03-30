@@ -1,16 +1,18 @@
-import { authAPI } from "../api/api.js";
+import { authAPI, profileAPI } from "../api/api.js";
 import { stopSubmit } from "redux-form";
 import { setLoginedUserId } from "./profile_reducer";
 
 const SET_AUTH_USER_DATA = "SET_AUTH_USER_DATA";
 const SET_CAPTCHA_URL = "SET_CAPTCHA_URL";
+const GET_USER_IMAGE = "GET_USER_IMAGE";
 
 const initialState = {
   id: null,
   email: null,
   login: null,
   isAuthoriserd: false,
-  captchaUrl: null
+  captchaUrl: null,
+  userImage: null
 };
 
 export const setAuthUserData = (id, email, login, isAuthoriserd) => ({
@@ -22,7 +24,10 @@ export const setAuthUserData = (id, email, login, isAuthoriserd) => ({
     isAuthoriserd
   }
 });
-
+const setProfileImage = userImage => ({
+  type: GET_USER_IMAGE,
+  userImage
+});
 export const setCaptchaUrl = url => ({
   type: SET_CAPTCHA_URL,
   url
@@ -35,6 +40,8 @@ export const authoriseTh = () => async dispatch => {
     dispatch(setAuthUserData(id, email, login, true));
     dispatch(setLoginedUserId(id));
     dispatch(setCaptchaUrl(null));
+    let data = await profileAPI.getUserProfile(id);
+    dispatch(setProfileImage(data.photos.large));
   }
 };
 export const logInTh = (email, password, rememberMe, captcha) => async dispatch => {
@@ -69,6 +76,11 @@ const authReducer = (state = initialState, action) => {
         ...state,
         ...action.data,
         isAuthoriserd: action.data.isAuthoriserd
+      };
+    case GET_USER_IMAGE:
+      return {
+        ...state,
+        userImage: action.userImage
       };
     case SET_CAPTCHA_URL:
       return {
