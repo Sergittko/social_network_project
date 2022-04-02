@@ -4,6 +4,10 @@ import Post from "./Post/Post";
 import { Field, reduxForm, reset } from "redux-form";
 import { Textarea } from "../../common/FormControls/FormControls";
 import { maxLength } from "../../../util/validators";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPaperPlane
+} from "@fortawesome/free-solid-svg-icons";
 
 const maxLengthText = maxLength(5000);
 
@@ -23,7 +27,7 @@ let MyPostsForm = props => {
         />
       </div>
       <div className={posts.posts__input_button}>
-        <button>Send =></button>
+        <button><FontAwesomeIcon icon={faPaperPlane} /></button>
       </div>
     </form>
   );
