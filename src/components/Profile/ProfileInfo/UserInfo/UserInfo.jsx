@@ -38,6 +38,7 @@ const UserInfo = props => {
 
       <div className={user.app__user_data}>
         <p className={user.user__name}>{props.name}</p>
+        <div>
         <p>
           Description:{" "}
           {props.about != null ? props.about : "no profile description"}
@@ -50,6 +51,7 @@ const UserInfo = props => {
           userId={props.id}
         />
         <p>User ID: {props.id}</p>
+        </div>
       </div>
       <div className={user.userContactsContainer}>
         {Object.keys(props.contacts).map(key => {

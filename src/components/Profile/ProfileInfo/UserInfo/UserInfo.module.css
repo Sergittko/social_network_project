@@ -3,10 +3,17 @@
   justify-content: flex-start;
   z-index: 10;
   position: relative;
+  height: fit-content;
+  padding: 7px;
+  /* background-color: rgb(131 132 136 / 60%); */
+  border-radius: 10px;
 }
 
 .app__user_data {
-  margin: 0 0 0 20px;
+  margin: 5px 0 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .app__user_data p {
@@ -15,20 +22,23 @@
 }
 
 .user__name {
-  font-size: 20px !important;
-  margin: 0 0 25px 0 !important;
+  font-size: 22px !important;
+  /* margin: 0 0 25px 0 !important; */
   font-weight: 600;
 }
 
 .app__content_avatar {
-  width: 150px;
-  height: 150px;
+  width: auto;
+  height: inherit;
   object-fit: cover;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .userPhotoContainer {
   position: relative;
+  width: 150px;
+  height: 150px;
 }
 
 .userPhotoContainer input {
@@ -63,8 +73,9 @@
 /*                    UserContacts                      */
 .userContactsContainer {
   position: absolute;
+  top: 0;
   right: 0;
-  height: 140px;
+  height: 154px;
   padding: 5px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

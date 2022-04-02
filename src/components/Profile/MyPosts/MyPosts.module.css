@@ -2,6 +2,29 @@
   width: 100%;
 }
 
+.addPost {
+  all: unset;
+  position: relative;
+  font-size: 20px;
+  background-color: #838488;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: -webkit-fill-available;
+  transition: 0.2s;
+  z-index: 5;
+}
+
+.addPost:hover {
+  background-color: #3770c6;
+}
+
+.addPost:active {
+  background-color: #2a4f87;
+}
+
 .app__posts_input {
   display: flex;
   flex-direction: column;
@@ -18,32 +41,39 @@
   font-size: 16px;
   resize: none;
   font-weight: 100;
-  border-radius: 0 0 5px 5px;
+  border-radius: 10px;
   outline: none;
-  border-top: 2px solid #767676;
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
+  /* border-top: 2px solid #767676; */
+  /* border-bottom: 0; */
+  /* border-left: 0; */
+  /* border-right: 0; */
   padding: 6px 50px 4px 10px;
   overflow-y: auto;
+  z-index: 0;
+  display: block;
 }
 
 .posts__input_text {
-  margin: 0;
-  width: 100%;
+  margin: -29px 0 0 0;
+  background: rgb(131 132 136 / 50%);
+  padding: 25px 5px 5px 5px;
+  border-radius: 10px;
+  width: -webkit-fill-available;
 }
 
 .posts__input_button {
-  margin: 10px 0 0 0;
+  margin: -35px 11px 0px 0;
 }
 
 .posts__input_button button {
   box-sizing: border-box;
   width: 70px;
+  height: 25px;
   text-align: left;
   margin: 0;
   color: #fff;
-  background-color: #59b876;
+  background-color: #3770c6;
+  border-radius: 51px;
 }
 
 .app__blog {

@@ -4,8 +4,8 @@
   align-items: center;
   height: calc(100vh - 295px);
   margin: 10px 0 0 0;
-  background-color: #eaa49a;
+  background-color: #838488;
   filter: contrast(0.75);
-  border-radius: 0 0 5px 5px;
+  border-radius: 10px;
   font-size: 35px;
 }

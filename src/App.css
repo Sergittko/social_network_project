@@ -7,7 +7,7 @@ html {
 body {
   background-color: #444343;
   padding: 10px;
-  color: #2a2a2a;
+  color: #fefefc;
 }
 
 html::-webkit-scrollbar-track {
@@ -47,7 +47,7 @@ html::-webkit-scrollbar-thumb {
 
 .app__content {
   grid-area: c;
-  background-color: #e4573e;
+  background-color: #282c3c;
   padding: 10px;
   border-radius: 0 0 10px 0;
 }
