@@ -14,7 +14,7 @@ const Profile = props => {
         updatePhoto={props.updatePhoto}
       />
       {props.defaultUserId === props.userInfoData?.userId ? (
-        <MyPostsContainer />
+        <MyPostsContainer userPhoto={props.userInfoData.photos.large}/>
       ) : (
         <div className={style.noPosts}>
           {props.userInfoData?.fullName} has no posts

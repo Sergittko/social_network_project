@@ -1,5 +1,6 @@
 import React from "react";
 import post from "./Post.module.css";
+import defaultUser from "../../../../../src/assets/userImages/user_default.jpg";
 
 document.addEventListener("click", event => {
   if (event.target.getAttribute("name") === "like_btn") {
@@ -23,7 +24,7 @@ const Post = props => {
       <div className={post.app__blog_elem}>
         <img
           className={post.app__blog_image}
-          src="https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-avatar-icon-png-image_889339.jpg"
+          src={defaultUser && props.userPhoto}
           alt=""
         />
         <p className={post.app__blog_text}>{props.message}</p>

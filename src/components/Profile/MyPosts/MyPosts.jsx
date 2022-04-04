@@ -5,13 +5,16 @@ import { Field, reduxForm, reset } from "redux-form";
 import { Textarea } from "../../common/FormControls/FormControls";
 import { maxLength } from "../../../util/validators";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPaperPlane
-} from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const maxLengthText = maxLength(5000);
-
 let MyPostsForm = props => {
+  let [scrollHeight, changeScrollHeight] = useState(47);
+  let onChange = e => {
+    if (e.target.scrollHeight !== scrollHeight && scrollHeight < 140 ) {
+      changeScrollHeight(e.target.scrollHeight);
+    }
+  };
   return (
     <form onSubmit={props.handleSubmit} className={posts.app__posts_input}>
       <div className={posts.posts__input_text}>
@@ -20,14 +23,17 @@ let MyPostsForm = props => {
           name="postTextarea"
           validate={[maxLengthText]}
           id="postTextarea"
-          placeholder='Type your post...'
+          placeholder="Type your post..."
           maxLength="1000"
-          rows="5"
           autoFocus
+          onChange={onChange}
+          style={{ height: scrollHeight }}
         />
       </div>
       <div className={posts.posts__input_button}>
-        <button><FontAwesomeIcon icon={faPaperPlane} /></button>
+        <button>
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </button>
       </div>
     </form>
   );
@@ -45,10 +51,11 @@ const MyPosts = React.memo(props => {
       likesNumber={elem.likesNumber}
       dataId={elem.dataId}
       message={elem.message}
+      userPhoto={props.userPhoto}
     />
   ));
   const onPostSubmit = (postText, dispatch) => {
-    props.addPost(postText.postTextarea);
+    !!postText.postTextarea && props.addPost(postText.postTextarea);
     dispatch(reset("profilePostInput"));
   };
 
