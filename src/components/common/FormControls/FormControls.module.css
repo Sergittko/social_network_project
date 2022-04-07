@@ -17,8 +17,8 @@
   z-index: 0;
   padding: 5px 0 0 0;
   border-radius: 0 0 5px 5px;
-  color: #ffcccc;
-  background-color: #a20000;
+  color: #ffeeee;
+  background-color: #b53838;
   /* position: absolute; */
   animation-direction: alternate;
   animation: errorSpanShow 0.2s ease-out both;

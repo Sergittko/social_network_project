@@ -10,7 +10,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+  background: #888e99;
   border-radius: 10px;
   max-width: 360px;
   margin: auto;
@@ -20,7 +20,7 @@
 
 .form input {
   outline: 0;
-  background: #f2f2f2;
+  background: #fafcff;
   width: 100%;
   border: 0;
   border-radius: 5px;
@@ -32,14 +32,14 @@
 }
 
 .form input:focus {
-  background: #dbdbdb;
+  background: #e1e5eb;
 }
 
 .form button {
   font-family: 'Comfortaa', cursive;
   text-transform: uppercase;
   outline: 0;
-  background: #4bb870;
+  background: #2a4f87;
   width: 100%;
   border: 0;
   border-radius: 5px;
@@ -47,12 +47,16 @@
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
+.form button:hover {
+  background: #3665ad;
+}
+
 .form button:active {
-  background: #39915f;
+  background: #244575;
 }
 
 .login_form {
@@ -61,7 +65,7 @@
 
 .spanHeader {
   font-size: 75px;
-  color: #4bb870;
+  color: #f3f3f3;
 }
 
 .rememberMe {
@@ -86,14 +90,13 @@
   margin: 0 -10px 0 0;
   object-fit: cover;
   overflow: hidden;
-  /* border: 5px solid #f2f2f2; */
-  /* border-radius: 5px; */
+  border-radius: 5px 0 0 5px;
 }
 
 .globalError {
   margin: 0 auto 15px auto;
-  background: #a20000;
-  color: #ffcccc;
+  color: #ffeeee;
+  background-color: #b53838;
   padding: 7px;
   border-radius: 10px;
   max-width: 200px;
