@@ -8,7 +8,7 @@
   padding: 10px;
 }
 
-.app__blog_elem:last-child{
+.app__blog_elem:last-child {
   margin: 20px 0 0 0;
 }
 
@@ -16,21 +16,71 @@
   display: flex;
   justify-content: flex-end;
   margin: 0 0 0 auto;
+  background-color: #3770c6;
+  border-radius: 5px;
+  padding: 4px 0px;
 }
 
 .like_block span {
-  margin: 0 5px 0 0;
-  width: 40px;
+  margin: 0 5px 0 10px;
+  max-width: 40px;
   text-align: right;
 }
 
+.like_block button {
+  background: none;
+  border: none;
+  transition: 0.1s;
+  color: inherit;
+  outline: none;
+  margin: -4px 0;
+  border-radius: 5px;
+  background-color: #4081e3;
+}
+
+.like_block button:hover {
+  background-color: #438af5;
+}
+
+.like_block button:active {
+  background-color: #356fc6;
+}
+
+/* .like_block button:focus {
+  animation-name: bounce;
+  animation-duration: 2s;
+  -moz-animation-name: bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  10% {
+    transform: scale(1.1, .9) translateY(0);
+  }
+
+  30% {
+    transform: scale(.9, 1.1) translateY(-100px);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+} */
+
 .like_button[data-liked="false"] {
-  background-color: #4fee83;
+  color: #fefefc;
   transition: 0.1s;
 }
 
 .like_button[data-liked="true"] {
-  background-color: #ee4f4f;
+  color: #14ff0d;
   transition: 0.1s;
 }
 
