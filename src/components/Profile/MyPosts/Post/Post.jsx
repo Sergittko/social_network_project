@@ -1,24 +1,19 @@
 import React from "react";
 import post from "./Post.module.css";
 import defaultUser from "../../../../../src/assets/userImages/user_default.jpg";
-
-document.addEventListener("click", event => {
-  if (event.target.getAttribute("name") === "like_btn") {
-    let btn_id = event.target.dataset.id;
-    let btn_liked = event.target.dataset.liked;
-    let span = document.querySelectorAll(`span[span-id='${btn_id}']`);
-    let span_count = span[0].innerHTML;
-    if (btn_liked === "false") {
-      span[0].innerHTML = ++span_count;
-      event.target.dataset.liked = "true";
-    } else {
-      span[0].innerHTML = --span_count;
-      event.target.dataset.liked = "false";
-    }
-  }
-});
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 const Post = props => {
+  let like = e => {
+    let data = e.currentTarget.dataset;
+    let likesNumber = JSON.parse(data.likesnumber);
+    let liked = JSON.parse(data.liked);
+    let id = JSON.parse(data.id);
+    liked ? --likesNumber : ++likesNumber;
+    props.likePost(id, liked, likesNumber);
+  };
+
   return (
     <div>
       <div className={post.app__blog_elem}>
@@ -33,10 +28,11 @@ const Post = props => {
           <button
             data-liked={props.liked}
             data-id={props.dataId}
-            name="like_btn"
+            data-likesnumber={props.likesNumber}
             className={post.like_button}
+            onClick={like}
           >
-            like
+            <FontAwesomeIcon icon={faThumbsUp} />
           </button>
         </div>
       </div>
@@ -44,6 +40,4 @@ const Post = props => {
   );
 };
 
-// Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-// quidem eum, ducimus officia inventore veritatis.
 export default Post;

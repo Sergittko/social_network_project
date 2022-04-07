@@ -2,6 +2,7 @@ import { profileAPI } from "../api/api.js";
 
 const ADD_POST = "ADD-POST";
 const DELETE_POST = "DELETE_POST";
+const LIKE_POST = "LIKE_POST";
 const SET_PROFILE_DATA = "SET_PROFILE_DATA";
 const SET_LOGINED_USER_ID = "SET_LOGINED_USER_ID";
 const SET_USER_STATUS = "SET_USER_STATUS";
@@ -13,21 +14,21 @@ let initialState = {
   userInfoData: null,
   postsData: [
     {
-      liked: "false",
-      likesNumber: "99",
+      liked: false,
+      likesNumber: 99,
       dataId: 1,
       message: "Tarrantino and Nolan are films genius!!"
     },
     {
-      liked: "true",
-      likesNumber: "7",
+      liked: true,
+      likesNumber: 7,
       dataId: 2,
       message:
         "Found a cool citate from Kill Bill, like and ill send u in messages it"
     },
     {
-      liked: "false",
-      likesNumber: "9",
+      liked: false,
+      likesNumber: 9,
       dataId: 3,
       message:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, aspernatur velit. Ea provident vitae eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cum, dicta minima excepturi aliquid ea laboriosam odit beatae, accusantium unde magnam, sapiente earum quibusdam cupiditate reiciendis nam porro quidem ullam reprehenderit ab impedit quas illum. Odio qui debitis deserunt tenetur, provident, rem consequuntur perspiciatis eius magni iste, ex atque magnam voluptatibus molestias commodi. Assumenda quam, ratione quia cumque voluptatem, nesciunt facilis non, mollitia dolor corporis saepe illo optio fugit neque. Neque ipsa nulla ab adipisci? Ab non enim dolore possimus eaque neque odio vel magni veniam nam molestiae repellat, veritatis quas ipsum, voluptate rem et, est qui iste repudiandae eius."
@@ -43,6 +44,12 @@ export const addPost = postText => ({
 export const deletePost = deleteId => ({
   type: DELETE_POST,
   deleteId
+});
+export const likePost = (postId, liked, likesNumber) => ({
+  type: LIKE_POST,
+  postId,
+  liked,
+  likesNumber
 });
 export const setProfileData = data => ({
   type: SET_PROFILE_DATA,
@@ -66,7 +73,7 @@ export const updateUserPhoto = (imageSmall, imageLarge) => ({
   imageLarge
 });
 
-export const getUserProfileTh = (userFromParams,authorisedUser) => async dispatch => {
+export const getUserProfileTh = (userFromParams, authorisedUser) => async dispatch => {
   let userId = !userFromParams ? authorisedUser : userFromParams;
   let data = await profileAPI.getUserProfile(userId);
   dispatch(setProfileData(data));
@@ -108,6 +115,17 @@ const profileReducer = (state = initialState, action) => {
         ...state,
         postsData: state.postsData.filter(p => p.dataId !== action.deleteId)
       };
+    case LIKE_POST:
+      let newPostData = state.postsData.map(p =>
+        p.dataId === action.postId
+          ? { ...p, liked: !action.liked, likesNumber: action.likesNumber }
+          : p
+      );
+
+      return {
+        ...state,
+        postsData: newPostData
+      };
     case SET_PROFILE_DATA:
       return {
         ...state,
@@ -131,5 +149,7 @@ const profileReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+
 
 export default profileReducer;

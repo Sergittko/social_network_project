@@ -52,6 +52,7 @@ const MyPosts = React.memo(props => {
       dataId={elem.dataId}
       message={elem.message}
       userPhoto={props.userPhoto}
+      likePost={props.likePost}
     />
   ));
   const onPostSubmit = (postText, dispatch) => {
