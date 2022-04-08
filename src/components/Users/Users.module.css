@@ -39,11 +39,11 @@
 
 .pagination li a {
   text-decoration: none;
-  color: #b0c7ad;
+  color: #fefefc;
   margin: 5px;
   /* padding: 10px 18px; */
-  border: 5px solid #43bd86;
-  background-color: #2f0f52;
+  border: 5px solid #3770c6;
+  background-color: #3c4a91;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
@@ -55,11 +55,11 @@
 }
 
 .pagination li a:hover {
-  background-color: #4d1a85;
+  background-color: #2f3867;
 }
 
 .activeElement a {
-  background-color: #6625ad !important;
+  background-color: #29315a !important;
   font-weight: 900;
 }
 
@@ -96,8 +96,8 @@ li.prev a, li.next a {
   top: 0%;
   transform: translate(0%, -180%);
   text-decoration: underline;
-  color: #2a2a2a;
-  background-color: #ff9481;
+  color: #fefefc;
+  background-color: #3770c6;
   padding: 5px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -114,6 +114,4 @@ li.prev a, li.next a {
 .searchFilter:hover {
   max-width: 170px;
   padding: 5px 10px 5px 15px;
-  color: #2a3170;
-  background-color: #ffb1a3;
 }
