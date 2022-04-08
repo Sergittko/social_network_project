@@ -35,6 +35,11 @@
   background: #e1e5eb;
 }
 
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
 .form button {
   font-family: 'Comfortaa', cursive;
   text-transform: uppercase;
@@ -78,6 +83,9 @@
 .rememberMe input {
   width: fit-content;
   margin: 5px 5px 0 0;
+}
+.rememberMe label:hover {
+  color: #f6fdff;
 }
 
 .captcha {
