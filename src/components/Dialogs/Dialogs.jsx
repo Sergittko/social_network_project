@@ -6,6 +6,8 @@ import UserMessages from "./UserMessages/UserMessages";
 import { Field, reduxForm } from "redux-form";
 import { Textarea } from "../common/FormControls/FormControls";
 import { maxLength } from "../../util/validators";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const maxLength20 = maxLength(20);
 
@@ -23,7 +25,9 @@ const DialogsForm = props => {
           className={dial.textarea}
         />
 
-        <button>Send</button>
+        <button>
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </button>
       </form>
     </div>
   );

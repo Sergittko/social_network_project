@@ -5,26 +5,46 @@
 }
 
 .dialogs_list {
-  border-right: 2px solid #ffcdcd;
+  /* border-right: 2px solid #ffcdcd; */
   /* padding: 0 5px 0 0; */
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+  /* background: #3770c6; */
+  background: rgb(155, 192, 236);
+  background: radial-gradient(circle, rgba(155, 192, 236, 1) 0%, rgba(230, 159, 190, 1) 100%);
+  overflow: overlay;
+  height: calc(100vh - 130px);
+}
+
+.dialogs_list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dialogs_list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.dialogs_list::-webkit-scrollbar-thumb {
+  background-color: rgb(131 132 136 / 89%);
 }
 
 .message_wrapper {
-  background-color: #ff9481;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  /* background-color: #ff9481; */
   border-radius: 5px;
   padding: 10px 10px 75px 10px;
   position: relative;
 }
 
-.messages{
-  overflow-y:auto;
+.messages {
+  overflow-y: auto;
   /* height: 100%; */
   height: calc(100vh - 215px);
 }
 
 .messages::-webkit-scrollbar {
-	width: 5px;
+  width: 5px;
 }
 
 .messages::-webkit-scrollbar-thumb {
@@ -32,7 +52,7 @@
 }
 
 .messages::-webkit-scrollbar-thumb {
-	background-color: #e48675;
+  background-color: #3770c6;
 }
 
 .dialog_input {
@@ -47,7 +67,7 @@
   display: block;
   border-radius: 0 0 5px 5px;
   outline: none;
-  border-top: 2px solid #767676;
+  border-top: 2px solid #838488;
   border-bottom: 0;
   border-left: 0;
   border-right: 0;
@@ -55,12 +75,12 @@
   margin: 0;
   padding: 6px 50px 4px 10px;
   width: 100%;
-  background-color: #ffcdcd;
+  background-color: #bcb5db;
   overflow: hidden;
   font-size: 16px;
   resize: none;
   font-weight: 100;
-  overflow-y:auto;
+  overflow-y: auto;
   /* white-space: nowrap; */
 }
 
@@ -79,22 +99,27 @@
   background-color: none;
 }
 
-
 .dialog_input button {
-  background-color: #ff6aa6;
-  color: #ffe8e8;
-  outline: none;
   position: absolute;
   right: 5px;
-  top: 48%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   box-sizing: border-box;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+  height: 85%;
   text-align: center;
-  overflow: hidden;
-  padding: 0;
-  transform: translateY(-50%);
-  margin:auto;
+  color: #fefefc;
+  background-color: #3770c6;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  z-index: 4;
+}
+
+.dialog_input button:hover {
+  background-color: #3262aa;
+}
+
+.dialog_input button:active {
+  background-color: #2a4f87;
 }
