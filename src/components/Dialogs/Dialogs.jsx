@@ -47,7 +47,7 @@ const Dialogs = props => {
   ));
 
   const onMessageSubmit = formData => {
-    props.messageTextareaAction(formData.messageTextarea);
+    formData.messageTextarea && props.messageTextareaAction(formData.messageTextarea);
   };
 
   return (
