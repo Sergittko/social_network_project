@@ -96,10 +96,6 @@ h1 {
   /* position: relative; */
 }
 
-.inputContainer input:not([value=""]), textarea:not([value=""]) {
-  background-color: #ffd9d2;
-}
-
 .inputContainer textarea {
   resize: none;
 }
@@ -143,10 +139,6 @@ h1 {
   width: max-content;
 }
 
-.mainInformation>div:nth-child(2)>div:nth-child(2)>div {
-  display: inline-block;
-}
-
 .inputContainer span {
   font-size: 15px;
   margin: 3px auto 0 auto;
@@ -178,7 +170,7 @@ h1 {
   z-index: 555;
   background-color: #00a255;
   color: aliceblue;
-  bottom: 35px;
+  top: 45px;
   left: 0;
   right: 0;
   margin: auto;
@@ -337,6 +329,11 @@ label>input[type=checkbox] {
   background-color: #cccccc;
   border-radius: 5px;
   overflow: hidden;
+  transition: 0.1s;
+}
+
+.field_container:hover {
+  background-color: #dfdfdf;
 }
 
 .field_placeholder {
@@ -360,10 +357,10 @@ input[type=text].field_input {
   box-sizing: border-box;
   width: 100%;
   bottom: 0px;
-  background-color: #cccccc;
+  background-color: inherit;
 }
 
-input[type=text].field_input:focus {
+input[type=text].field_input:focus{
   outline: none;
 }
 
