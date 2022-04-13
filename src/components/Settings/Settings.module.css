@@ -16,7 +16,9 @@ h1 {
   max-width: 200px;
   max-height: 200px;
   display: inline-block;
-  background-color: #266b37;
+  background-color: #cccccc;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .main form {
@@ -47,21 +49,44 @@ h1 {
 }
 
 .submitButton button {
+  all: unset;
   position: absolute;
-  bottom: 5px;
-  width: 100%;
+  bottom: 0;
+  font-size: 20px;
+  background-color: #838488;
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: -webkit-fill-available;
+  transition: 0.2s;
+  z-index: 5;
+}
+
+.submitButton button:hover {
+  background-color: #51c671;
+}
+
+.submitButton button:active {
+  background-color: #4aa262;
 }
 
 .mainInformation {
   width: 100%;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .inputContainer {
-  width: 90%;
-  margin: 0 0 5px 0;
-  /* display: flex; */
+  width: fit-content;
+  margin: -12px auto 5px auto;
+  display: flex;
   position: relative;
+  background-color: #cccccc;
+  padding: 10px 38.5px;
+  border-radius: 5px;
 }
 
 .inputContainer input, textarea {
@@ -111,6 +136,7 @@ h1 {
   /* position: absolute; */
   display: inline-block;
   cursor: pointer;
+  color: #0f0f0f;
 }
 
 .inputContainer input[type=checkbox] {
@@ -171,7 +197,12 @@ h1 {
 
 .userPhotoContainer {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #cccccc;
+  padding: 8px;
+  border-radius: 5px;
 }
 
 .userPhotoContainer input {
@@ -182,7 +213,7 @@ h1 {
 }
 
 .userPhotoContainer label {
-  background: #f15d22;
+  background: #3770c6;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -200,7 +231,11 @@ h1 {
 }
 
 .userPhotoContainer label:hover {
-  background-color: #e24d11;
+  background-color: #3e7fe2;
+}
+
+.userPhotoContainer label:active {
+  background-color: #2e61af;
 }
 
 .logOutButton_enter {
@@ -229,7 +264,6 @@ h1 {
 /* *, *:after, *:before {
   box-sizing: border-box;
 } */
-
 label {
   display: block;
 }
@@ -290,4 +324,68 @@ label>input[type=checkbox] {
   40% {
     width: 30px;
   }
+}
+
+/* ======================================================================== */
+.field_container {
+  position: relative;
+  border: 1px solid #bcbaba;
+  height: 50px;
+  width: 90%;
+  padding-left: 12px;
+  margin: 6px auto;
+  background-color: #cccccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.field_placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translate(5px, -50%);
+  pointer-events: none;
+  transition: all 0.14s ease-in-out;
+  font-size: 18px;
+  color: #4c4c4c;
+}
+
+input[type=text].field_input {
+  color: #0f0f0f;
+  border: none;
+  /* padding: 5px; */
+  padding: 20px 5px 10px 5px;
+  /* margin-top: 20px; */
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0px;
+  background-color: #cccccc;
+}
+
+input[type=text].field_input:focus {
+  outline: none;
+}
+
+input[type=text].field_input.c-fix, input[type=text].field_input:focus, input[type=text].field_input:not(:placeholder-shown) {
+  border-color: transparent;
+}
+
+input[type=text].field_input.c-fix~label, input[type=text].field_input:focus~label, input[type=text].field_input:not(:placeholder-shown)~label {
+  color: #686868;
+  font-size: 11px;
+  top: calc(25% - 0.5rem);
+  transform: translate(5px, 0%);
+}
+
+input[type=text].field_input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[type=text].field_input::-moz-placeholder {
+  color: transparent;
+}
+
+input[type=text].field_input:-ms-input-placeholder {
+  color: transparent;
 }

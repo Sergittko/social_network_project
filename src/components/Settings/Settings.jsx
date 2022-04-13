@@ -29,13 +29,9 @@ const SettingsForm = props => {
 
   return (
     <form onSubmit={props.handleSubmit}>
-    {
-      props.submitSucceeded && props.valid && props.pristine && (
-      <div className={style.submitSucceeded}>
-        Changes saved
-      </div>
-    )
-    }
+      {props.submitSucceeded && props.valid && props.pristine && (
+        <div className={style.submitSucceeded}>Changes saved</div>
+      )}
       {props.error &&
         props.error.map(error => (
           <div className={style.globalError} key={error}>
@@ -80,13 +76,6 @@ const SettingsForm = props => {
 
           <div>
             <div className={style.inputContainer}>
-              <p>Name</p>
-              {createField("fullName", Input, "text", {
-                placeholder: "name",
-                validate: [required]
-              })}
-            </div>
-            <div className={style.inputContainer}>
               <label htmlFor="lookingForAJob">Looking for a job</label>
               {createField("lookingForAJob", Input, "checkbox", {
                 id: "lookingForAJob"
@@ -97,39 +86,52 @@ const SettingsForm = props => {
               <div className={style.bullet}></div>
             </label>*/}
             </div>
-            <div className={style.inputContainer}>
-              <p>My skills</p>
-              {createField("lookingForAJobDescription", Textarea, "text", {
-                placeholder: "my skills",
-                maxLength: "1000",
-                rows: "2",
-                cols: "30",
-                validate: [required]
+
+            <div className={style.field_container}>
+              {createField("fullName", Input, "text", {
+                placeholder: " ",
+                validate: [required],
+                className: style.field_input,
+                label: {
+                  className: style.field_placeholder,
+                  text: "Full name"
+                }
               })}
             </div>
-            <div className={style.inputContainer}>
-              <p>Profile description</p>
-              {createField("aboutMe", Textarea, "text", {
-                placeholder: "description",
-                maxLength: "1000",
-                rows: "5",
-                cols: "30",
-                validate: [required]
+
+            <div className={style.field_container}>
+              {createField("lookingForAJobDescription", Input, "text", {
+                placeholder: " ",
+                validate: [required],
+                className: style.field_input,
+                label: {
+                  className: style.field_placeholder,
+                  text: "My skills"
+                }
+              })}
+            </div>
+            <div className={style.field_container}>
+              {createField("aboutMe", Input, "text", {
+                placeholder: " ",
+                validate: [required],
+                className: style.field_input,
+                label: {
+                  className: style.field_placeholder,
+                  text: "Profile description"
+                }
               })}
             </div>
           </div>
         </div>
 
         <div className={style.contactsContainer}>
-          <p className={style.contacts}>Contacts </p>
-          {contactsInput("github", style.inputContainer)}
-          {contactsInput("facebook", style.inputContainer)}
-          {contactsInput("instagram", style.inputContainer)}
-          {contactsInput("twitter", style.inputContainer)}
-          {contactsInput("youtube", style.inputContainer)}
-          {contactsInput("vk", style.inputContainer)}
-          {contactsInput("website", style.inputContainer)}
-          {contactsInput("mainLink", style.inputContainer)}
+          {Object.keys(props.initialValues.contacts).reverse().map(contact => {
+            return contactsInput(contact, {
+              field_container: style.field_container,
+              field_input: style.field_input,
+              field_placeholder: style.field_placeholder
+            });
+          })}
         </div>
       </div>
 
@@ -182,3 +184,17 @@ let Settings = compose(
 )(SettingsContainer);
 
 export default Settings;
+
+// <div className={style.field_container}>
+//   <div>
+//     <input
+//       className={style.field_input}
+//       name="inputName"
+//       type="text"
+//       placeholder=" "
+//     />
+//     <label className={style.field_placeholder} htmlFor="inputName">
+//       First name
+//     </label>
+//   </div>
+// </div>;
