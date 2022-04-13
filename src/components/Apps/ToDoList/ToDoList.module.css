@@ -26,7 +26,7 @@
   font-size: 18px;
   font-weight: 400;
   color: #e7e7e7;
-  background-color: #950740;
+  background-color: #3d4b92;
 }
 
 .list_header i {
@@ -56,6 +56,11 @@
   border-left: 2px solid #cacaca;
   border-radius: 0 0 5px 0;
   font-size: 16px;
+  transition: 0.2s;
+}
+
+.input_tasks button:hover {
+  background-color: #e9e5e5;
 }
 
 .input_tasks button:active {
@@ -79,9 +84,8 @@
   margin: 0;
   height: 225px;
   padding: 10px 35px;
-  background: #ffd4e1;
-  /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(255, 212, 225, 1) 62%); */
-  /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,236,242,1) 7%, rgba(255,212,225,1) 16%); */
+  /* background: #ffd4e1; */
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 .ul_tasks::-webkit-scrollbar {
@@ -90,8 +94,8 @@
 
 .ul_tasks::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  border: #ffd4e1 4px solid;
-  background-color: #950740;
+  border: #a3b9e4 4px solid;
+  background-color: #3d4b92;
 }
 
 .ul_tasks li {
@@ -116,7 +120,7 @@
 }
 
 .doneTask span {
-  background-color: #ff66c6;
+  background-color: #40bbff;
 }
 
 .dot_span {
@@ -125,17 +129,17 @@
   height: 0;
   margin: 0 5px 0 0;
   padding: 5px;
-  border: #d22591 3px solid;
+  border: #3770c6 3px solid;
   border-radius: 50%;
   transition: 0.15s ease;
 }
 
 .dot_span:hover {
-  background-color: #d22591;
+  background-color: rgb(88 188 255 / 79%);
 }
 
 .dot_span:active {
-  background-color: #5e1242;
+  background-color: #313c74;
 }
 
 .ul_tasks button {
@@ -170,7 +174,7 @@
   top: 6px;
   text-decoration: underline;
   color: #2a2a2a;
-  background-color: #ffd4e1;
+  background-color: #cad0e9;
   padding: 3px 16px;
   border-radius: 10px;
   cursor: pointer;
