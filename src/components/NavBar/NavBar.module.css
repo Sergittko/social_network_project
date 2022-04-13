@@ -3,6 +3,8 @@
   background-color: #282c3c;
   border-radius: 0 0 0 10px;
   color: #838488;
+  position: relative;
+  overflow: hidden;
 }
 
 .app__nav_list {
@@ -79,4 +81,18 @@ li>a.active {
 .friendsBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.catGif{
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: -10px;
+}
+
+.catGif img{
+  width: inherit;
+  filter: opacity(0.5);
+  cursor: pointer;
+  z-index: 9999;
 }

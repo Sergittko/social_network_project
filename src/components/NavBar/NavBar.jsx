@@ -5,8 +5,10 @@ import Weather from "./Weather/Weather";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseUser, faUsers, faCommentDots, faListUl, faSlidersH } from "@fortawesome/free-solid-svg-icons";
+import cat from '../../img/gifs/cat1.gif';
 
 const NavBar = props => {
+  let [catMode, changeCatMode] = React.useState('block');
   return (
     <nav className={nav.app__nav}>
       <ul className={nav.app__nav_list}>
@@ -43,7 +45,7 @@ const NavBar = props => {
         </li>
       </ul>
       {props.isAuthoriserd && localStorage.getItem('weatherCity') && props.weather && (
-        <div className={nav.friendsWrapper}>
+        <div className={nav.friendsWrapper} onDoubleClick={()=>{changeCatMode('block')}}>
           <p className={nav.friendsHeader}>Weather</p>
           <Weather
             city={props.weather.request[0].query}
@@ -53,6 +55,9 @@ const NavBar = props => {
           />
         </div>
       )}
+      <div className={nav.catGif}>
+        <img src={cat} alt="" onDoubleClick={()=>{changeCatMode('none')}} style={{display: catMode}}/>
+      </div>
     </nav>
   );
 };

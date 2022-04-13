@@ -2,7 +2,7 @@ import React from "react";
 
 let Preloader = props => {
   return (
-    <div>
+    <div style={{margin: "50px auto"}}>
       <img
         src={props.preloaderGif}
         alt="preloader"
