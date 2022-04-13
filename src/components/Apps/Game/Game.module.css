@@ -16,6 +16,7 @@
   display: block;
   cursor: pointer;
   object-fit: cover;
+  filter: saturate(0.7);
 }
 
 .frame {
@@ -24,7 +25,7 @@
   height: calc(100vh - 293px);
   display: block;
   margin: auto;
-  border: #ff9481 solid 5px;
+  border: #52463f solid 5px;
 }
 
 .distance {
