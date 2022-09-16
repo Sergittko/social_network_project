@@ -59,7 +59,6 @@ const LoginContainer = props => {
 
   return (
     <div className={login.login}>
-      {/*arikushi.tekimo@gmail.com 091001562 */}
       <div className={login.form}>
         <span className={login.spanHeader}>login</span>
         <LoginReduxForm onSubmit={onSubmit} captcha={props.captchaUrl} />
